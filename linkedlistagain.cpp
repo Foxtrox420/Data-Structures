@@ -122,8 +122,15 @@ void popMid(int val){
 }
 
 void search(int val){
-	printf("%d is found in the list");
-	printf("%d is not found in the list"); 
+	Node* curr = head; 
+	while(curr != NULL){
+		if(curr->val == val){
+			printf("%d is found in the list\n",val);
+			return; 
+		}
+		curr = curr->next; 
+	}
+	printf("%d is not found in the list\n",val); 
 }
 
 void print(){
