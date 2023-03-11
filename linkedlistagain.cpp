@@ -3,38 +3,38 @@
 //link list
 
 struct Node{
- int val;
- Node* next;
+	 int val;
+	 Node* next;
 }*head = NULL, *tail = NULL;
 
 
 Node* makeNode(int val){
- Node* newNode = (Node*)malloc(sizeof(Node*));
- newNode->val = val;
- newNode->next = NULL;
- return newNode;
+	Node* newNode = (Node*)malloc(sizeof(Node*));
+	newNode->val = val;
+	newNode->next = NULL;
+	return newNode;
 }
 
 void pushHead(int val){
- Node* newNode = makeNode(val);
- if(head==NULL){
-  head=newNode;
-  tail=newNode;
- }else{
-  newNode->next = head;
-  head = newNode;
- }
+	 Node* newNode = makeNode(val);
+	 if(head==NULL){
+	  head=newNode;
+	  tail=newNode;
+	 }else{
+	  newNode->next = head;
+	  head = newNode;
+	 }
 }
 
 void pushTail(int val){
- Node *newNode = makeNode(val);
- if(head == NULL){
-  head = newNode;
-  tail = newNode;
- }else{
-  tail->next = newNode;
-  tail = newNode;
- }
+	 Node *newNode = makeNode(val);
+	 if(head == NULL){
+	  head = newNode;
+	  tail = newNode;
+	 }else{
+	  tail->next = newNode;
+	  tail = newNode;
+	 }
 }
 
 void pushMid(int val){
