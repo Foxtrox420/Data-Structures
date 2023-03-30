@@ -85,7 +85,7 @@ void popTail(){
 	}
 	else{
 		Node* curr = head; 
-		while(curr->next == tail){
+		while(curr != NULL){
 			if(curr->next == tail){
 				curr->next = NULL; 
 				free(tail);
