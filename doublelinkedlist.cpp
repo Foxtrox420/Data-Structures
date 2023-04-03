@@ -8,7 +8,7 @@ struct Node{
 }*head, *tail;
 
 Node *createNode(int value){
-    Node *newNode = (Node *)malloc(sizeof(Node*));
+    Node *newNode = (Node *)malloc(sizeof(Node));
     newNode->value = value; 
     newNode->next = newNode->prev = NULL; 
     return newNode; 
