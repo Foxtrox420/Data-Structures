@@ -72,7 +72,7 @@ void popHead(int value){
     Node *temp = head; 
     head = temp->next; 
     head->prev = NULL; 
-    free(head); 
+    free(temp); 
 }
 
 void popTail(int value){
