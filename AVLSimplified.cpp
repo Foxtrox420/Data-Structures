@@ -137,6 +137,18 @@ Node* deleteNode(Node* root, int val) {
 	return root;
 }
 
+Node *search(Node *root, int val){
+	if(root == NULL || val = root->val){
+		return root; 
+	} 
+	else if(val < root->val){
+		return search(root->left, val); 
+	}
+	else if(val > root->val{
+		return search(root->right, val); 
+	}
+}
+
 void preOrder(Node *root){
 	if(root == NULL){
 		return; 
